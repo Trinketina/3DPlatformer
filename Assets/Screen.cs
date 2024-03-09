@@ -26,4 +26,9 @@ public class Screen : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ReturnToTitle()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

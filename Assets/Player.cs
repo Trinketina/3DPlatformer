@@ -50,6 +50,12 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
         }
         
+        //danace
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            anim.SetInteger("DanceVal", Random.Range(0, 10));
+            anim.SetTrigger("Dance");   
+        }
 
         //tests for out of bounds
         if (transform.position.y < -5 && stats.Health > 0)
@@ -84,6 +90,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
 
     public void AddToScore(int s)
     {
