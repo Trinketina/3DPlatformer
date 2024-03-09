@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player Stats")]
 public class PlayerStats : ScriptableObject
 {
-    private int health = 20;
+    [SerializeField] private int health = 20;
     public int Health {  get { return health; } set {  health = value<maxHealth ? value: maxHealth ; } }
 
     [SerializeField] private int maxHealth = 20;
